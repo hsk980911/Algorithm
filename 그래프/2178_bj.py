@@ -18,6 +18,7 @@ def bfs():
                 if graph[dx][dy] == 1:
                     graph[dx][dy] = graph[x][y] + 1
                     q.append((dx, dy))
+                    
 graph[0][0] = 1
 bfs()
 print(graph[N-1][M-1])
