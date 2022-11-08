@@ -7,4 +7,4 @@ def solution(n):
     if n == 1:
         return dp[0]
     else:
-        return dp[-1] % 1234567
+        return dp[-1] % 1234567 
