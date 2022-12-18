@@ -6,16 +6,18 @@ def solution(order):
     
     cnt = 0
     for i in order:
-        if sub:
+        if len(main) > 0 and main[0] <= i:
+            sub.extend(main[:i-main[0]])
+            main = main[i-main[0]+1:]
+            cnt += 1
+            continue
+        elif sub:
             if sub[-1] == i:
                 sub.pop()
                 cnt += 1
+                continue
             else:
-                return cnt
-        elif i in main:
-            sub.extend(main[:main.index(i)])
-            main = main[main.index(i)+1:]
-            cnt += 1
+                break
         else:
-            return cnt
+            break       
     return cnt
