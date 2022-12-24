@@ -1,11 +1,7 @@
 def solution(X, Y):
     answer = []
-    X = list(X)
-    Y = list(Y)
-    for i in X:
-        if i in Y:
-            answer.append(i)
-            Y.remove(i)
+    for i in set(list(X))&set(list(Y)):
+        answer += [i]*min(X.count(i), Y.count(i))
     answer.sort(reverse=True)
     answer = ''.join(answer)
     
