@@ -7,5 +7,7 @@ def solution(X, Y):
     
     if len(answer) == 0:
         return '-1'
+    elif answer[0] == '0':
+        return '0'
     else:
-        return str(int(answer))
+        return answer
