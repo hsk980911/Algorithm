@@ -14,7 +14,6 @@ def dijkstra(graph, start):
       continue
     
     for new_destination, new_distance in graph[current_destination].items():
-      print(graph[current_destination].items())
       distance = current_distance + new_distance  # 해당 노드를 거쳐 갈 때 거리
       if distance < distances[new_destination]:  # 알고 있는 거리 보다 작으면 갱신
         distances[new_destination] = distance
