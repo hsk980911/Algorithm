@@ -14,6 +14,5 @@ for _ in range(T):
         rooms[0][i] = i
     for i in range(1, k+1):
         for j in range(1, n+1):
-            print(rooms[i][j-1] + rooms[i][j-1])
-            rooms[i][j] = rooms[i][j-1] + rooms[i][j-1]
-    print(rooms)
+            rooms[i][j] = rooms[i][j-1]+rooms[i-1][j]
+    print(rooms[k][n])
